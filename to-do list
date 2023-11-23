@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        /* Styles remain the same as before */
+    </style>
+    <title>To-Do List App</title>
+</head>
+<body>
+    <div id="app">
+        <h1>To-Do List</h1>
+        <form id="taskForm" onsubmit="return addTask()">
+            <label for="taskInput">New Task:</label>
+            <input type="text" id="taskInput" placeholder="Add a new task">
+            <button type="submit">Add Task</button>
+            <p id="error" class="error"></p>
+        </form>
+        <button onclick="exportTasks()">Export Tasks</button>
+        <button onclick="importTasks()">Import Tasks</button>
+        <button onclick="readTasks()">Read Tasks</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        // Functions for CSV operations
+        function exportTasks() {
+            const taskList = document.getElementById('taskList');
+            const tasks = Array.from(taskList.children).map(task => task.firstChild.textContent);
+            const csv = Papa.unparse({ data: tasks, fields: ['task'] });
+            downloadCSV(csv, 'tasks.csv');
+        }
+
+        function importTasks() {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = '.csv';
+            fileInput.addEventListener('change', handleFileSelect);
+            fileInput.click();
+        }
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const csv = e.target.result;
+                    const tasks = Papa.parse(csv, { header: true }).data.map(row => row.task);
+                    loadTasksFromCSV(tasks);
+                };
+                reader.readAsText(file);
+            }
+        }
+
+        function downloadCSV(csv, filename) {
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            if (navigator.msSaveBlob) { // IE 10+
+                navigator.msSaveBlob(blob, filename);
+            } else {
+                const url = URL.createObjectURL(blob);
+                link.setAttribute('href', url);
+                link.setAttribute('download', filename);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+        // Functions for task operations
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskList = document.getElementById('taskList');
+            const error = document.getElementById('error');
+
+            if (taskInput.value.trim() === '') {
+                error.textContent = 'Task cannot be empty.';
+                return false;
+            } else {
+                error.textContent = '';
+            }
+
+            const li = document.createElement('li');
+            li.innerHTML = `<span>${taskInput.value}</span>
+                            <div>
+                                <button onclick="editTask(this)">Edit</button>
+                                <button onclick="completeTask(this)">Complete</button>
+                                <button onclick="deleteTask(this)">Delete</button>
+                            </div>`;
+            taskList.appendChild(li);
+
+            taskInput.value = '';
+            return false;
+        }
+
+        function editTask(button) {
+            const span = button.parentNode.parentNode.firstChild;
+            const newTaskText = prompt('Edit task:', span.textContent);
+
+            if (newTaskText !== null) {
+                span.textContent = newTaskText;
+            }
+        }
+
+        function completeTask(button) {
+            const span = button.parentNode.parentNode.firstChild;
+            span.classList.toggle('completed');
+        }
+
+        function deleteTask(button) {
+            const taskList = document.getElementById('taskList');
+            const li = button.parentNode.parentNode;
+            taskList.removeChild(li);
+        }
+
+        // Function to read and display all task data
+        function readTasks() {
+            const taskList = document.getElementById('taskList');
+            const tasks = Array.from(taskList.children).map(task => task.firstChild.textContent);
+            console.log(tasks);
+        }
+
+        // Load tasks from CSV
+        function loadTasksFromCSV(tasks) {
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+
+            tasks.forEach(task => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span>${task}</span>
+                                <div>
+                                    <button onclick="editTask(this)">Edit</button>
+                                    <button onclick="completeTask(this)">Complete</button>
+                                    <button onclick="deleteTask(this)">Delete</button>
+                                </div>`;
+                taskList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
