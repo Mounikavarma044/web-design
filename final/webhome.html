@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>D DOLPHIN - Home</title>
+
+    <style>
+        /* Your existing styles */
+
+        body {
+            background-color: #D3D4D2; /* Replace with your desired color */
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(76, 118, 121, 0.7),rgba(76,118,121,0.7)),url(https://www.stylecraze.com/wp-content/uploads/2017/07/Market-Analysis-And-Strategy.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            position: relative;
+
+        }
+        nav img{
+            width: 150px;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: 13px;
+            font-size: 13px;
+        }
+        .nav-links ul li::after{
+            content: '';
+            width: 0px;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
+        }
+        .text-box{
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .text-box h1{
+            font-size: 55px;
+        }
+        .text-box p{
+            margin: 10px 0 40px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #fff;
+        }
+        .hero-btn{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+        }
+        .hero-btn:hover{
+            border: 1px solid #f44336;
+            background: #f44336;
+            transition: 1s;
+        }
+
+        nav .fa{
+            display: none;
+        }
+        /*----design---------*/
+        .design{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 10px;
+        }
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .design{
+            min-height: 150vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(76, 118, 121, 0.7),rgba(76,118,121,0.7)),url(https://images.moneycontrol.com/static-mcnews/2021/12/7-miss-universe-harnaaz-sandhu.jpg?impolicy=website&width=1600&height=900);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        .design p{
+            color: #fff;
+            padding: 10px 50px;
+        }
+        .design h1{
+            color: #451f6b;
+        }
+        .register h2{
+            color: rgb(208, 211, 11)
+        }
+        .link{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+        }
+        .link:hover{
+            border: 1px solid #f44336;
+            background: #1c12a1;
+            transition: 1s;
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="webhome.html"><img src="images/logo-1-removebg-preview-e1683393597719.png" alt="D DOLPHIN"></a>
+            <div class="nav-links">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="design.html">DESIGN</a></li>
+                    <li><a href="abotus.html">ABOUTUS</a></li>
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
+            
+        </nav>
+        <div class="text-box">
+            <h1>D DOLPHIN FASHION DESIGN</h1>
+            <p>Our company is a new venture that has been created for the Global Audience, Our focus is to provide customised wear.<br>Our dream is to create an ecosystem that allows 
+                women ,regardless of their history, to redefine, redo, or 
+                rework their lives the way they chose, the way they see fit.<br>Our Business is focused for the quality and style conscious
+                customers, providing unique, eclectic and affordable
+                products. We intend to win customers through the wide
+                range of products that we have & the unique services that
+                we are offering. We encourage the creativity and
+                promotion of individualism through style and fashion at
+                affordable prices.</p>
+            <a href="design.html" class="hero-btn">Visit us to know more</a>
+         </div> 
+    </section>
+    <!-----DESIGN----->
+
+    <section class="design">
+        <h1>MISS AND MRS UNIVERSE </h1>
+        <h2>Turn your dreams into reality in Bharath grab the golden opportunity, before its too late!!!!</h2>
+        <p>Dreams do come true. you just need to take the first step.<br> Entries open for Miss and Mrs. DOLPHIN UNIVERSE for a limited period.This is your gateway to fame.<br> So Hurry !! 
+        </p>
+        <div class="images">
+            <img src="images/WhatsApp Image 2023-11-27 at 12.24.05 AM.jpeg" width="450" height="450" alt="">
+        </div>
+        <div class="register">
+            <h3>Follow the link below to participate!</h3>
+            <h2>Make your dreams Come true</h2>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSejfYj-PjUx7R-5IYU8rLPzz9TFKv7ZgX9mFkh41i8ArsACTg/viewform?pli=1" class="link">REGISTER</a>
+        </div>
+    </section>
+    <script>
+        var navlinks = document.getElementById("navLinks");
+        function showmenu(){
+            navlinks.style.right = "0";
+        }
+        function hidemenu(){
+            navlinks.style.right = "-200px";
+        }
+    </script>
+    
+        
+
+</body>
+</html>

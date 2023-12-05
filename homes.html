@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>D DOLPHIN - Home</title>
+
+    <style>
+        /* Your existing styles */
+
+        body {
+            background-color: #D3D4D2; /* Replace with your desired color */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #8c9494;
+            color: #fff;
+            padding: 1em;
+        }
+        h1 {
+            font-family: 'Arial';
+            margin: 10px 550px; /* Adjust the margin as needed */
+            color: black;
+        }
+        h3 {
+            color: #f2f5f0;
+            margin: 10px -380px; /* Adjust the margin as needed */
+        }
+        h2 {
+            margin: 10px 490px;
+        }
+        .logo-container img {
+            width: 150px; /* Set the width of the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5%; /* Optional: Add a border-radius for a circular image */
+            margin: 10px 550px; /* Add right margin for spacing between image and text */
+        }
+        .design {
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center the items horizontally */
+            align-items: center; /* Center the items vertically */
+        }
+        .design img {
+            width: 150px; /* Set the width of the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5%; /* Optional: Add a border-radius for a circular image */
+            margin: 10px; /* Add margin for spacing between images */
+        }
+        p {
+            margin: 10px 50px;
+        }
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #8c9494;
+            color: #fff;
+            padding: 1em;
+        }
+
+        /* Style for buttons */
+        button {
+            color: #0c0c0c;
+            border: none;
+            padding: 10px 10px;
+            margin: 10px 10px;
+            cursor: pointer;
+        }
+        .event h1{
+            font-size: large;
+            margin: 10px 350px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="c:\Users\HP\Downloads\logo-1-removebg-preview-e1683393597719.png" alt="D DOLPHIN">
+            <div>
+                <h1>D DOLPHIN</h1>
+                <button onclick="window.location.href = 'home.html';">&#8962 HOME</button>
+                <button onclick="window.location.href = 'about us.html';">ABOUT US</button>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h2>Welcome to D DOLPHIN Fashions!</h2>
+        <!-- Home page content goes here -->
+        <p>Our Company is a new venture that has been created for the Global Audience. Our focus is to provide Customized wear, apparel and accessories and position ourselves as the top fashion Venture serving the global market. Our intentions are to obtain market shares and become a central hub of shopping activity for all Indians as well as the Global Audience, who enjoy wearing fashionable apparel. We believe that this is critical to our initial success and long term growth!</p>
+        <div class="design">
+            <img src="c:\Users\HP\Downloads\fashion.jpg" alt="design">
+            <img src="c:\Users\HP\Downloads\fashions.jpg" alt="design1">
+            <img src="c:\Users\HP\Downloads\Screenshot-2023-05-03-210433-1.png" alt="1">
+            <img src="c:\Users\HP\Downloads\Screenshot-2023-05-03-214419-1.png" alt="2">
+            <img src="c:\Users\HP\Downloads\Screenshot-2023-05-03-232410-1.png" alt="3">
+        </div>
+        <div class="event">
+            <h2>EVENTS</h2>
+            <h1>We are organising events for those who are interested in modelling</h1>
+            <img src="c:\Users\HP\Downloads\event.jpeg" alt="event1">
+            <img src="c:\Users\HP\Downloads\event1.jpeg" alt="event2">
+            <img src="c:\Users\HP\Downloads\event2.jpeg" alt="event3">
+            <img src="c:\Users\HP\Downloads\event3.jpg" alt="event4">
+            <img src="c:\Users\HP\Downloads\event4.png" alt="event5">
+        </div>
+    </section>
+    <footer>
+        <!-- Buttons added for navigation -->
+        <p>&copy; 2023 Fashion Shop</p>
+        <p>Contact us: 
+            <span>&#9742; +91 7275394960</span> <!-- Phone symbol: &#9742; -->
+            <span>&#9993; d.dolphin.pvt.ltd@gmail.com</span> <!-- Email symbol: &#9993; -->
+            <span>&#127968; House No.186, Gurguj Lajpatnagar,
+                Ward No.13, Near Punjab Sindh Bank,
+                Sumerpur, Hamirpur Uttar
+                Pradesh (210502), India</span> <!-- Home symbol: &#127968; -->
+        </p>
+    </footer>
+
+    <script>
+        function navigate(page) {
+            alert('Navigating to ' + page);
+            // You can add logic here to navigate to the specific page
+            document.getElementById("registrationForm").addEventListener("submit", function(event))
+            event.preventDefault();
+        }
+    </script>
+
+</body>
+</html>

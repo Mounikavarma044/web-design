@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>D DOLPHIN - Design</title>
+
+    <style>
+        /* Your existing styles */
+
+        body {
+            background-color: rgb(123, 128, 128);
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+        }
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            position: relative;
+
+        }
+        nav img{
+            width: 150px;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: 13px;
+            font-size: 13px;
+        }
+        .nav-links ul li::after{
+            content: '';
+            width: 0px;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
+        }
+        .ceo{
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .ceo h3{
+            font-size: 30px;
+        }
+        .ceo h4{
+            color: rgb(218, 175, 82);
+        }
+        .brand{
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .brand h3{
+            font-size: 30px;
+        }
+        .brand h4{
+            color: rgb(218, 175, 82);
+        }
+        .media{
+            width: 90%;
+            color: #504a4a;
+            position: absolute;
+            top: 160%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .link{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+        }
+        .link:hover{
+            border: 1px solid #42403f;
+            background: #9b97cf;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="webhome.html"><img src="images/logo-1-removebg-preview-e1683393597719.png" alt="D DOLPHIN"></a>
+            <div class="nav-links">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="webhome.html">HOME</a></li>
+                    <li><a href="design.html">DESIGN</a></li>
+                    <li><a href="">ABOUTUS</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        <div class="ceo">
+            <h3>Founder Chairman & CEO of the company</h3>
+            <h4>Mr. NITISH SHIVHARE</h4>
+            <img src="images/ceo-q63vlyjn6squhblf8zizd17837uuh8exzxookw8xj8.jpeg" alt="ceo">
+            <p>The only international fashion designer in our company. A renowned, young, enthusiastic fashion designer.<br> Total 9 years in the business & still pumping out various ideas & guiding us towards the company goals. He is into western Collection & has many fashion weeks </p>   
+        </div>
+        <div class="brand">
+            <h3>Brand Ambassador of the company</h3>
+            <h4>Ms. NIHARICA RAIZADA</h4>
+            <img src="images/brand ambassador.jpeg" alt="">
+            <p>Our Bollywood actress is known for her charismatic personality and her ability to connect with her fans. She has been chosen by several popular brands as their brand ambassador, owing to her wide reach and influence in the entertainment industry.As a brand ambassador, our actress has been associated with various products and services, ranging from beauty and fashion to technology and healthcare. She brings her unique style and personality to each of these brands, making them more relatable and appealing to her fans.</p>
+        </div>
+        <div class="media">
+            <h2>Follow US On INSTAGARAM FOR MORE UPDATES</h2>
+            <a href="https://www.instagram.com/dakshitdolphin/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" class="link">INSTAGRAM</a>
+        </div>
+         
+    </section>
+    
+</body>
